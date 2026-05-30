@@ -45,7 +45,7 @@
         .top-banner {
             width: 100%;
             max-width: 1000px;
-            height: auto;
+            height: 100%;
             border-radius: 8px;
             border: 1px solid #2a475e;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -129,6 +129,8 @@
 			gap:30px;               /* Cria um espaço uniforme de 30px entre cada elemento */
 			margin-top: 0px;        /* Espaçamento em relação ao conteúdo acima */
 			margin-bottom: 0px;     /* Espaçamento em relação ao final da página */
+			position: relative; /* CRUCIAL: Cria a referência para o posicionamento do contato */
+			width: 100%;        /* Garante que o container ocupe toda a largura disponível */
         }
 		.donation-nav a {
             color: #66c0f4;
@@ -136,6 +138,14 @@
 			font-weight: bold;
 			font-size: 14px;
         }
+		.donation-nav a.btn-contato {
+			position: absolute;
+			right: 3%; /* Controla a distância em relação ao lado direito. Aumente este valor (ex: 20%, 25%) para movê-lo mais para a esquerda */
+		}
+		.donation-nav a.btn-blog {
+			position: absolute;
+			left: 3%; /* Controla a distância em relação ao lado direito. Aumente este valor (ex: 20%, 25%) para movê-lo mais para a esquerda */
+		}
 		.donation-nav a:hover {
 			color: #ffffff;
 		}
@@ -209,103 +219,105 @@
         </aside>
 		<main class="main-content">
 	
-			<img src="imagens/banner.jpg" class="top-banner" alt="Cristhian Cardoso ETS 2 Mod Editor">
-			<h1>Mods By Cristhian</h1>
+			<img src="imagens/banner.jpg" class="top-banner" alt="Cristhian Cardoso ETS 2 Mod Editor" fetchpriority=high>
+			<h1>Mods By Cristhian Cardoso</h1>
 			<p class="subtitle">Escolha um mod abaixo para ver detalhes e fazer o download</p>
 			
 			<div class="mods-grid">
 				
 				<div class="mod-card">
-					<img src="imagens/bitrem_semireboque_randon.jpg" class="mod-image" alt="Reboque Bitrem Semi-Reboque Randon" loading="lazy">
+					<img src="imagens/bitrem_semireboque_randon.jpg" class="mod-image" alt="Reboque Bitrem Semi-Reboque Randon" fetchpriority=high>
 					<h2 class="mod-title">Bitrem e Semi-Reboque Randon</h2>
 					<a href="bitrem_semi_randon.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 				
 				<div class="mod-card">
-					<img src="imagens/mercedes_ls1938.jpg" class="mod-image" alt="Mercedes-Benz LS 1938" loading="lazy">
+					<img src="imagens/mercedes_ls1938.jpg" class="mod-image" alt="Mercedes-Benz LS 1938" fetchpriority=high>
 					<h2 class="mod-title">Mercedes-Benz LS 1938</h2>
 					<a href="mercedes_ls1938.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 				
 				<div class="mod-card">
-					<img src="imagens/volvo_nl12_edc.jpg" class="mod-image" alt="Volvo NL 12 EDC" loading="lazy">
+					<img src="imagens/volvo_nl12_edc.jpg" class="mod-image" alt="Volvo NL 12 EDC" fetchpriority=high>
 					<h2 class="mod-title">Volvo NL12 EDC</h2>
 					<a href="volvo_nl12_edc.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 				
 				<div class="mod-card">
-					<img src="imagens/caio_apache_vip1.jpg" class="mod-image" alt="Caio Apache VIP 1" loading="lazy">
+					<img src="imagens/caio_apache_vip1.jpg" class="mod-image" alt="Caio Apache VIP 1" fetchpriority=high>
 					<h2 class="mod-title">Caio Apache VIP 1</h2>
 					<a href="caio_apache_vip1.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/marcopolo_g6_1200.jpg" class="mod-image" alt="Marcopolo Paradiso G6 1200" loading="lazy">
+					<img src="imagens/marcopolo_g6_1200.jpg" class="mod-image" alt="Marcopolo Paradiso G6 1200" fetchpriority=high>
 					<h2 class="mod-title">Marcopolo Paradiso G6 1200</h2>
 					<a href="marcopolo_g6_1200.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/marcopolo_g4_800.jpg" class="mod-image" alt="Marcopolo Viaggio G4 800" loading="lazy">
+					<img src="imagens/marcopolo_g4_800.jpg" class="mod-image" alt="Marcopolo Viaggio G4 800" fetchpriority=high>
 					<h2 class="mod-title">Marcopolo Viaggio G4 800</h2>
 					<a href="marcopolo_g4_800.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/busscar_vissta_buss_1999.jpg" class="mod-image" alt="Busscar Vissta Buss 1999" loading="lazy">
+					<img src="imagens/busscar_vissta_buss_1999.jpg" class="mod-image" alt="Busscar Vissta Buss 1999" fetchpriority=high>
 					<h2 class="mod-title">Busscar Vissta Buss 1999</h2>
 					<a href="busscar_vissta_buss_1999.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/volare_w9.jpg" class="mod-image" alt="Volare W9" loading="lazy">
+					<img src="imagens/volare_w9.jpg" class="mod-image" alt="Volare W9" fetchpriority=high>
 					<h2 class="mod-title">Volare W9</h2>
 					<a href="volare_w9.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/caio_millennium_2_pbc.jpg" class="mod-image" alt="Caio Millennium 2 PBC" loading="lazy">
+					<img src="imagens/caio_millennium_2_pbc.jpg" class="mod-image" alt="Caio Millennium 2 PBC" fetchpriority=high>
 					<h2 class="mod-title">Caio Millennium 2 PBC</h2>
 					<a href="caio_millennium_2_pbc.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/vw_parati_1994.jpg" class="mod-image" alt="Volkswagen Parati 1994" loading="lazy">
+					<img src="imagens/vw_parati_1994.jpg" class="mod-image" alt="Volkswagen Parati 1994" fetchpriority=high>
 					<h2 class="mod-title">Volkswagen Parati 1994</h2>
 					<a href="vw_parati_1994.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/agrale_14000s.jpg" class="mod-image" alt="Agrale 14000 S" loading="lazy">
+					<img src="imagens/agrale_14000s.jpg" class="mod-image" alt="Agrale 14000 S" fetchpriority=high>
 					<h2 class="mod-title">Agrale 14000 S</h2>
 					<a href="agrale_14000s.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/vw_meteor.jpg" class="mod-image" alt="Volkswagen Meteor" loading="lazy">
+					<img src="imagens/vw_meteor.jpg" class="mod-image" alt="Volkswagen Meteor" fetchpriority=high>
 					<h2 class="mod-title">Volkswagen Meteor</h2>
 					<a href="vw_meteor.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/mod_passageiros.jpg" class="mod-image" alt="Mod de Passageiros (Ônibus)" loading="lazy">
+					<img src="imagens/mod_passageiros.jpg" class="mod-image" alt="Mod de Passageiros (Ônibus)" fetchpriority=high>
 					<h2 class="mod-title">Mod de Passageiros</h2>
 					<a href="mod_passageiros.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/mod_passageiros_carros.jpg" class="mod-image" alt="Mod de Passageiros para Carros" loading="lazy">
+					<img src="imagens/mod_passageiros_carros.jpg" class="mod-image" alt="Mod de Passageiros para Carros" fetchpriority=high>
 					<h2 class="mod-title">Mod de Passageiros p/ Carros</h2>
 					<a href="mod_passageiros_carros.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 
 				<div class="mod-card">
-					<img src="imagens/reboque_invisivel_agrale_14000_S.jpg" class="mod-image" alt="Reboque Agrale 14000S" loading="lazy">
+					<img src="imagens/reboque_invisivel_agrale_14000_S.jpg" class="mod-image" alt="Reboque Agrale 14000S" fetchpriority=high>
 					<h2 class="mod-title">Reboque Agrale 14000S</h2>
 					<a href="reboque_agrale.html" class="btn-view">Ver Detalhes e Download</a>
 				</div>
 			</div>
 			<nav class="donation-nav">
+				<a href="https://modding.scssoft.com/" target="_blank" class="btn-blog">🌐 Mod Wiki</a>
+			
 				<a href="doacao.html">❤️ Apoiar o Projeto (Doação) 🇧🇷</a>
 				
 				<div class="footer-logo">
@@ -315,6 +327,8 @@
 				</div>
 				
 				<a href="donate.html">❤️ Support the Project (Donate) 🌐</a>
+				
+				<a href="contato.html" class="btn-contato">✉️ Contato</a>
 			</nav>
 		</main>	
 		<aside class="sidebar-banner">

@@ -188,13 +188,30 @@
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
-		/* ESCONDER BANNERS EM TELAS PEQUENAS (CELULAR) */
+		/* TELAS PEQUENAS (CELULAR) */
         @media (max-width: 1200px) {
-            .sidebar-banner {
+            .sidebar-banner { /* ESCONDER BANNERS EM TELAS PEQUENAS (CELULAR) */
                 display: none;
             }
+			
 			.content-container {
 				flex-direction: column;
+			}
+			
+			.title-container {
+				flex-direction: column-reverse; /* Só empilha no celular (Botão em cima, título embaixo) */
+				gap: 10px;
+				padding: 0 15px;
+			}
+
+			.mod-title {
+				font-size: 22px; /* Reduz o título apenas no celular */
+			}
+
+			.btn-back {
+				position: static; /* Remove o absoluto apenas no celular */
+				align-self: flex-start; /* Alinha o botão à esquerda no celular */
+				left: auto;
 			}
         }
     </style>

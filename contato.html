@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Redes Sociais - Cristhian Cardoso</title>
+	<meta name="description" content="Entre em contato com Cristhian Cardoso. Acesse o perfil da Steam, Discord, YouTube e e-mail para suporte e novidades sobre os mods de ETS 2.">
+	<meta name="keywords" content="ets2 mods, cristhian cardoso, contato, discord, steam workshop, youtube ets2">
+	<link rel="icon" type="image/png" href="imagens/favicon.png">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5022692863965855"
+     crossorigin="anonymous"></script>
+	 
+    <style>
+        /* Estilo Gamer / Escuro / Steam (Idêntico ao index) */
+        body {
+            background-color: #1b2838;
+            color: #c7d5e0;
+            font-family: 'Motiva Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+			min-height: 100vh;
+        }
+        
+        .page-container {
+            display: flex;
+            width: 100%;
+            max-width: 1400px;
+            justify-content: center;
+        }
+		
+        .main-content {
+            flex: 1;
+            max-width: 1000px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+		
+        .top-banner {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #2a475e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+		
+		.title-container {
+			position: relative;
+			display: flex;
+			align-items: center; /* Centraliza verticalmente o botão com o texto do título */
+			justify-content: center; /* Mantém o conjunto centralizado na página */
+			gap: 15px; /* Espaço de 15px entre o botão e o título */
+			margin-top: 20px;
+			margin-bottom: 10px;
+			width: 100%;
+			min-height: 40px; /* Garante uma altura mínima para o alinhamento */
+		}
+		
+		.mod-title {
+            color: #ffffff;
+            text-align: center;
+			margin: 0; /* Zera as margens para não desalinharem */
+        }
+        p.subtitle {
+            color: #66c0f4;
+            margin-top: 0;
+            margin-bottom: 40px;
+           text-align: center;
+        }
+        
+        /* Grade das Redes Sociais */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+			max-width: 100%;
+			margin-bottom: 40px;
+        }
+        
+        /* Cartão de Contato */
+        .contact-card {
+            background-color: #121a24;
+            border: 1px solid #2a475e;
+            border-radius: 5px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+			transition: transform 0.2s, border-color 0.2s;
+        }
+		
+		.contact-card:hover {
+            border-color: #66c0f4;
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-title {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .contact-desc {
+            color: #acb2b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+		
+		.btn-contact {
+            text-decoration: none;
+            padding: 12px;
+            width: 85%;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            transition: background 0.2s;
+        }
+
+        /* Cores customizadas baseadas nas plataformas */
+        .btn-steam { background-color: #107c10; border: 1px solid #139213; }
+        .btn-steam:hover { background-color: #0b630b; }
+
+        .btn-workshop { background-color: #171a21; border: 1px solid #2a475e; color: #66c0f4; }
+        .btn-workshop:hover { background-color: #242934; color: #ffffff; }
+
+        .btn-discord { background-color: #5865F2; border: 1px solid #4752C4; }
+        .btn-discord:hover { background-color: #4752C4; }
+
+        .btn-youtube { background-color: #FF0000; border: 1px solid #CC0000; }
+        .btn-youtube:hover { background-color: #CC0000; }
+
+		/* Estilo do Botão de E-mail Interativo */
+        .btn-email { background-color: #0078d4; border: 1px solid #005a9e; position: relative; }
+        .btn-email:hover { background-color: #005a9e; }
+		
+		/* Estilo da mensagem de sucesso "Copiado!" */
+		.btn-email.copied { background-color: #107c10; border-color: #139213; }
+		
+		/* Menu inferior de navegação */
+        .donation-nav {
+			display: flex;
+			align-items: center;     /* Centraliza verticalmente o texto e a logo */
+			justify-content: center; /* Centraliza o bloco inteiro no meio da página */
+			gap:30px;               /* Cria um espaço uniforme de 30px entre cada elemento */
+			margin-top: 0px;        /* Espaçamento em relação ao conteúdo acima */
+			margin-bottom: 0px;     /* Espaçamento em relação ao final da página */
+			position: relative; /* CRUCIAL: Cria a referência para o posicionamento do contato */
+			width: 100%;        /* Garante que o container ocupe toda a largura disponível */
+        }
+		.donation-nav a {
+            color: #66c0f4;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 14px;
+        }
+		.donation-nav a:hover {
+			color: #ffffff;
+		}
+		.btn-back {
+			position: absolute;
+			color: #66c0f4;
+			text-decoration: none;
+			font-size: 14px;
+			white-space: nowrap; /* Impede que a palavra "Voltar" quebre em duas linhas */
+			left: 15px;
+        }
+
+		.footer-logo img {
+			width: 60px;
+			height: auto;
+			opacity: 0.9;
+		}
+		
+		/* AS LATERAIS DOS BANNERS */
+        .sidebar-banner {
+            width: 160px;
+            min-width: 160px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-banner .sticky-ad {
+            position: sticky;
+            top: 20px;
+            display: block;
+            width: 100%;
+        }
+		
+		/* RESPONSIVIDADE */
+        @media (max-width: 1200px) {
+            .sidebar-banner {
+                display: none;
+            }
+			
+			.title-container {
+				flex-direction: column-reverse; /* Empilha o botão acima do título em telas de celular */
+				gap: 10px;
+				padding: 0 15px;
+			}
+
+			.btn-back {
+				position: static; /* Remove o absoluto no celular */
+				align-self: flex-start; /* Joga o link para a lateral esquerda do celular */
+			}
+        }
+    </style>
+</head>
+<body>
+
+	<div class="page-container">
+	    <aside class="sidebar-banner">
+			<div class="sticky-ad">
+				<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-5022692863965855"
+				data-ad-slot="2258939190"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+        </aside>
+
+		<main class="main-content">
+	
+			<img src="imagens/banner.jpg" class="top-banner" alt="Cristhian Cardoso ETS 2 Mod Editor">
+			
+			<div class="title-container">
+				<h1  class="mod-title">Contato e Comunidade</h1>
+				<a href="index.html" class="btn-back" > ← Voltar para Home </a>
+			</div>
+			<p class="subtitle">Acompanhe as atualizações, tire dúvidas ou envie sugestões em nossos canais oficiais</p>
+			
+			<div class="contact-grid">
+				
+				<div class="contact-card">
+					<div class="contact-icon">🎮</div>
+					<h2 class="contact-title">Perfil Steam</h2>
+					<p class="contact-desc">Adicione na Steam para acompanhar minha atividade nos jogos e projetos de simulação.</p>
+					<a href="https://steamcommunity.com/id/cr1301/" target="_blank" class="btn-contact btn-steam">Ver Perfil Steam</a>
+				</div>
+				
+				<div class="contact-card">
+					<div class="contact-icon">🛠️</div>
+					<h2 class="contact-title">Steam Workshop</h2>
+					<p class="contact-desc">Inscreva-se diretamente na central de mods oficiais e receba atualizações automáticas no seu jogo.</p>
+					<a href="https://steamcommunity.com/id/cr1301/myworkshopfiles/" target="_blank" class="btn-contact btn-workshop">Ver Workshop</a>
+				</div>
+				
+				<div class="contact-card">
+					<div class="contact-icon">📺</div>
+					<h2 class="contact-title">YouTube</h2>
+					<p class="contact-desc">Inscreva-se no canal para assistir gameplays, tutoriais de instalação e reviews em vídeo das edições.</p>
+					<a href="https://www.youtube.com/@cristhian_cardoso" target="_blank" class="btn-contact btn-youtube">Acessar Canal</a>
+				</div>
+
+				<div class="contact-card">
+					<div class="contact-icon">✉️</div>
+					<h2 class="contact-title">E-mail</h2>
+					<p class="contact-desc">Para contatos formais, dúvidas de suporte avançado ou propostas de parcerias e mods personalizados.</p>
+					<button onclick="copyEmail(this)" class="btn-contact btn-email">crn.ets2@gmail.com</button>
+				</div>
+
+			</div>
+
+			<nav class="donation-nav">
+				
+				<a href="doacao.html">❤️ Apoiar o Projeto (Doação) 🇧🇷</a>
+				
+				<div class="footer-logo">
+					<a href="index.html">
+						<img src="imagens/favicon.png" alt="Página Inicial">
+					</a>
+				</div>
+				
+				<a href="donate.html">❤️ Support the Project (Donate) 🌐</a>
+			</nav>
+		</main>	
+
+		<aside class="sidebar-banner">
+			<div class="sticky-ad">
+				<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-5022692863965855"
+				data-ad-slot="2258939190"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+        </aside>
+	</div>
+		<script>
+		function copyEmail(buttonElement) {
+			const emailText = "crn.ets2@gmail.com";
+			
+			// Executa a cópia para a área de transferência usando a API moderna do navegador
+			navigator.clipboard.writeText(emailText).then(() => {
+				// Altera temporariamente o texto e a classe visual do botão
+				buttonElement.innerText = "✓ Copiado!";
+				buttonElement.classList.add("copied");
+				
+				// Restaura o visual original após 2.5 segundos
+				setTimeout(() => {
+					buttonElement.innerText = emailText;
+					buttonElement.classList.remove("copied");
+				}, 2500);
+			}).catch(err => {	
+				console.error("Erro ao copiar o e-mail: ", err);
+			});
+		}
+		</script>
+
+</body>
+</html>
